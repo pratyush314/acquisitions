@@ -1,2 +1,14 @@
 {"level":"info","message":"Hello from logger","service":"acquisitions-api","timestamp":"2025-09-19T16:32:44.529Z"}
 {"level":"info","message":"::1 - - [19/Sep/2025:16:32:44 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api","timestamp":"2025-09-19T16:32:44.537Z"}
+{"level":"info","message":"::1 - - [20/Sep/2025:10:17:53 +0000] \"POST /api//auth/sign-up HTTP/1.1\" 404 157 \"-\" \"PostmanRuntime/7.46.0\"","service":"acquisitions-api","timestamp":"2025-09-20T10:17:53.830Z"}
+{"level":"info","message":"::1 - - [20/Sep/2025:10:17:53 +0000] \"POST /api//auth/sign-up HTTP/1.1\" 404 157 \"-\" \"PostmanRuntime/7.46.0\"","service":"acquisitions-api","timestamp":"2025-09-20T10:17:53.896Z"}
+{"level":"info","message":"::1 - - [20/Sep/2025:10:18:39 +0000] \"POST /api//auth/sign-up HTTP/1.1\" 404 157 \"-\" \"PostmanRuntime/7.46.0\"","service":"acquisitions-api","timestamp":"2025-09-20T10:18:39.095Z"}
+{"level":"info","message":"::1 - - [20/Sep/2025:10:18:53 +0000] \"POST /api//auth/sign-up HTTP/1.1\" 404 157 \"-\" \"PostmanRuntime/7.46.0\"","service":"acquisitions-api","timestamp":"2025-09-20T10:18:53.606Z"}
+{"level":"info","message":"User registered successfully : ","service":"acquisitions-api","timestamp":"2025-09-20T10:19:10.827Z"}
+{"level":"info","message":"::1 - - [20/Sep/2025:10:19:10 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 102 \"-\" \"PostmanRuntime/7.46.0\"","service":"acquisitions-api","timestamp":"2025-09-20T10:19:10.829Z"}
+{"level":"info","message":"::1 - - [20/Sep/2025:10:19:26 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 63 \"-\" \"PostmanRuntime/7.46.0\"","service":"acquisitions-api","timestamp":"2025-09-20T10:19:26.669Z"}
+{"level":"info","message":"::1 - - [20/Sep/2025:10:19:44 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 113 \"-\" \"PostmanRuntime/7.46.0\"","service":"acquisitions-api","timestamp":"2025-09-20T10:19:44.915Z"}
+{"level":"info","message":"::1 - - [20/Sep/2025:10:39:22 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 63 \"-\" \"PostmanRuntime/7.46.0\"","service":"acquisitions-api","timestamp":"2025-09-20T10:39:22.265Z"}
+{"level":"info","message":"User test@gmail.com created successfully","service":"acquisitions-api","timestamp":"2025-09-20T10:39:31.811Z"}
+{"level":"info","message":"User registered successfully : ","service":"acquisitions-api","timestamp":"2025-09-20T10:39:31.815Z"}
+{"level":"info","message":"::1 - - [20/Sep/2025:10:39:31 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 108 \"-\" \"PostmanRuntime/7.46.0\"","service":"acquisitions-api","timestamp":"2025-09-20T10:39:31.816Z"}
