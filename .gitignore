@@ -1,2 +1,12 @@
 node_modules
 .env.*
+
+# Docker
+.dockerignore
+
+# Neon Local metadata
+.neon_local/
+
+# Logs
+logs/
+*.log
