@@ -279,3 +279,33 @@
 {"ip":"::1","isBot":false,"isDenied":false,"isRateLimit":false,"isShield":false,"level":"info","message":"Arcjet decision","path":"/api/users","service":"acquisitions-api","timestamp":"2025-09-20T17:02:32.848Z","userAgent":"PostmanRuntime/7.46.1"}
 {"level":"info","message":"All users retrieved successfully","service":"acquisitions-api","timestamp":"2025-09-20T17:02:34.255Z"}
 {"level":"info","message":"::1 - - [20/Sep/2025:17:02:34 +0000] \"GET /api/users HTTP/1.1\" 200 64 \"-\" \"PostmanRuntime/7.46.1\"","service":"acquisitions-api","timestamp":"2025-09-20T17:02:34.256Z"}
+{"ip":"::ffff:127.0.0.1","isBot":false,"isDenied":false,"isRateLimit":false,"isShield":false,"level":"info","message":"Arcjet decision","path":"/health","service":"acquisitions-api","timestamp":"2025-09-21T13:02:30.826Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [21/Sep/2025:13:02:30 +0000] \"GET /health HTTP/1.1\" 200 73 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2025-09-21T13:02:30.833Z"}
+{"ip":"::ffff:127.0.0.1","isBot":false,"isDenied":false,"isRateLimit":false,"isShield":false,"level":"info","message":"Arcjet decision","path":"/api","service":"acquisitions-api","timestamp":"2025-09-21T13:02:30.953Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [21/Sep/2025:13:02:30 +0000] \"GET /api HTTP/1.1\" 200 29 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2025-09-21T13:02:30.954Z"}
+{"ip":"::ffff:127.0.0.1","isBot":false,"isDenied":false,"isRateLimit":false,"isShield":false,"level":"info","message":"Arcjet decision","path":"/api","service":"acquisitions-api","timestamp":"2025-09-21T13:02:31.065Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [21/Sep/2025:13:02:31 +0000] \"GET /api HTTP/1.1\" 200 29 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2025-09-21T13:02:31.066Z"}
+{"ip":"::ffff:127.0.0.1","isBot":false,"isDenied":false,"isRateLimit":false,"isShield":false,"level":"info","message":"Arcjet decision","path":"/health","service":"acquisitions-api","timestamp":"2025-09-21T13:04:50.708Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [21/Sep/2025:13:04:50 +0000] \"GET /health HTTP/1.1\" 200 73 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2025-09-21T13:04:50.715Z"}
+{"ip":"::ffff:127.0.0.1","isBot":false,"isDenied":false,"isRateLimit":false,"isShield":false,"level":"info","message":"Arcjet decision","path":"/api","service":"acquisitions-api","timestamp":"2025-09-21T13:04:50.834Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [21/Sep/2025:13:04:50 +0000] \"GET /api HTTP/1.1\" 200 29 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2025-09-21T13:04:50.835Z"}
+{"ip":"::ffff:127.0.0.1","isBot":false,"isDenied":false,"isRateLimit":false,"isShield":false,"level":"info","message":"Arcjet decision","path":"/api","service":"acquisitions-api","timestamp":"2025-09-21T13:04:50.944Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [21/Sep/2025:13:04:50 +0000] \"GET /api HTTP/1.1\" 200 29 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2025-09-21T13:04:50.945Z"}
+{"ip":"::ffff:127.0.0.1","isBot":false,"isDenied":false,"isRateLimit":false,"isShield":false,"level":"info","message":"Arcjet decision","path":"/health","service":"acquisitions-api","timestamp":"2025-09-21T13:05:42.816Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [21/Sep/2025:13:05:42 +0000] \"GET /health HTTP/1.1\" 200 73 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2025-09-21T13:05:42.822Z"}
+{"ip":"::ffff:127.0.0.1","isBot":false,"isDenied":false,"isRateLimit":false,"isShield":false,"level":"info","message":"Arcjet decision","path":"/api","service":"acquisitions-api","timestamp":"2025-09-21T13:05:42.939Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [21/Sep/2025:13:05:42 +0000] \"GET /api HTTP/1.1\" 200 43 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2025-09-21T13:05:42.940Z"}
+{"ip":"::ffff:127.0.0.1","isBot":false,"isDenied":false,"isRateLimit":false,"isShield":false,"level":"info","message":"Arcjet decision","path":"/api","service":"acquisitions-api","timestamp":"2025-09-21T13:05:43.049Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [21/Sep/2025:13:05:43 +0000] \"GET /api HTTP/1.1\" 200 43 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2025-09-21T13:05:43.050Z"}
+{"ip":"::ffff:127.0.0.1","isBot":false,"isDenied":false,"isRateLimit":false,"isShield":false,"level":"info","message":"Arcjet decision","path":"/health","service":"acquisitions-api","timestamp":"2025-09-21T13:06:38.412Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [21/Sep/2025:13:06:38 +0000] \"GET /health HTTP/1.1\" 200 72 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2025-09-21T13:06:38.419Z"}
+{"ip":"::ffff:127.0.0.1","isBot":false,"isDenied":false,"isRateLimit":false,"isShield":false,"level":"info","message":"Arcjet decision","path":"/api","service":"acquisitions-api","timestamp":"2025-09-21T13:06:38.539Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [21/Sep/2025:13:06:38 +0000] \"GET /api HTTP/1.1\" 200 43 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2025-09-21T13:06:38.540Z"}
+{"ip":"::ffff:127.0.0.1","isBot":false,"isDenied":false,"isRateLimit":false,"isShield":false,"level":"info","message":"Arcjet decision","path":"/api","service":"acquisitions-api","timestamp":"2025-09-21T13:06:38.656Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [21/Sep/2025:13:06:38 +0000] \"GET /api HTTP/1.1\" 200 43 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2025-09-21T13:06:38.657Z"}
+{"ip":"::ffff:127.0.0.1","isBot":false,"isDenied":false,"isRateLimit":false,"isShield":false,"level":"info","message":"Arcjet decision","path":"/health","service":"acquisitions-api","timestamp":"2025-09-21T13:07:31.098Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [21/Sep/2025:13:07:31 +0000] \"GET /health HTTP/1.1\" 200 73 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2025-09-21T13:07:31.104Z"}
+{"ip":"::ffff:127.0.0.1","isBot":false,"isDenied":false,"isRateLimit":false,"isShield":false,"level":"info","message":"Arcjet decision","path":"/api","service":"acquisitions-api","timestamp":"2025-09-21T13:07:31.224Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [21/Sep/2025:13:07:31 +0000] \"GET /api HTTP/1.1\" 200 43 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2025-09-21T13:07:31.225Z"}
+{"ip":"::ffff:127.0.0.1","isBot":false,"isDenied":false,"isRateLimit":false,"isShield":false,"level":"info","message":"Arcjet decision","path":"/nonexistent","service":"acquisitions-api","timestamp":"2025-09-21T13:07:31.334Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [21/Sep/2025:13:07:31 +0000] \"GET /nonexistent HTTP/1.1\" 404 29 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2025-09-21T13:07:31.335Z"}

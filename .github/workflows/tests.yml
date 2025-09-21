@@ -1,0 +1,71 @@
+name: Tests
+
+on:
+  push:
+    branches: [main, staging]
+  pull_request:
+    branches: [main, staging]
+
+jobs:
+  tests:
+    name: Run unit tests
+    runs-on: windows-latest
+    env:
+      NODE_ENV: test
+      NODE_OPTIONS: --experimental-vm-modules
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        id: test
+        continue-on-error: true
+        run: npm test -- --coverage
+
+      - name: Upload coverage artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage
+          path: coverage/**
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Add test summary and annotations
+        if: always()
+        shell: pwsh
+        run: |
+          $ok = '${{ steps.test.outcome }}' -eq 'success'
+          $hasCoverage = Test-Path -Path "coverage\lcov.info"
+
+          if ($ok) {
+            $status = "✅ Tests passed."
+          } else {
+            $status = "❌ Tests failed."
+            Write-Output "::error title=Tests failed::One or more tests failed. See the test step logs for details."
+          }
+
+          $coverageNote = if ($hasCoverage) { "Coverage report generated and uploaded as an artifact." } else { "No coverage report found." }
+
+          @"
+          $status
+
+          Environment:
+          - NODE_ENV: $env:NODE_ENV
+
+          $coverageNote
+          "@ | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+
+      - name: Fail workflow if tests failed
+        if: ${{ steps.test.outcome != 'success' }}
+        run: exit 1
