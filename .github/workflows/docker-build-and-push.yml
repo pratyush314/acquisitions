@@ -33,7 +33,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: docker.io/${{ secrets.DOCKER_USERNAME }}/acquisitions
+          images: docker.io/${{ secrets.DOCKER_USERNAME }}/acquisitions-app
           tags: |
             type=ref,event=branch
             type=sha
@@ -55,6 +55,6 @@ jobs:
       - name: Publish summary
         shell: bash
         run: |
-          echo "✅ Pushed image docker.io/${{ secrets.DOCKER_USERNAME }}/acquisitions with tags:" >> "$GITHUB_STEP_SUMMARY"
+          echo "✅ Pushed image docker.io/${{ secrets.DOCKER_USERNAME }}/acquisitions-app with tags:" >> "$GITHUB_STEP_SUMMARY"
           echo "" >> "$GITHUB_STEP_SUMMARY"
           echo "${{ steps.meta.outputs.tags }}" | sed 's/^/- /' >> "$GITHUB_STEP_SUMMARY"

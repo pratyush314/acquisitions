@@ -17,32 +17,38 @@ Commands
     ```
 
 - Run the API in watch mode (development)
+
   ```powershell path=null start=null
   # Ensure required environment variables are set in your shell or a .env file
   npm run dev
   ```
 
 - Start without watch (no npm script provided)
+
   ```powershell path=null start=null
   node src/index.js
   ```
 
 - Lint
+
   ```powershell path=null start=null
   npm run lint
   ```
 
 - Lint and fix
+
   ```powershell path=null start=null
   npm run lint:fix
   ```
 
 - Format (Prettier)
+
   ```powershell path=null start=null
   npm run format
   ```
 
 - Check formatting only
+
   ```powershell path=null start=null
   npm run format:check
   ```
@@ -64,6 +70,7 @@ Commands
     ```
 
 - Environment variables (Windows PowerShell examples)
+
   ```powershell path=null start=null
   $env:PORT = "3000"
   $env:DATABASE_URL = "postgres://user:password@host:5432/db"
@@ -72,7 +79,7 @@ Commands
   ```
 
 - Tests
-  - No test runner or npm test script is currently configured. The ESLint config includes globals for tests/**/*.js, but there are no tests in the repo.
+  - No test runner or npm test script is currently configured. The ESLint config includes globals for tests/\*_/_.js, but there are no tests in the repo.
 
 High-level architecture and structure
 
@@ -90,7 +97,7 @@ High-level architecture and structure
 
 - Module resolution and ESM
   - The project uses native ESM ("type": "module").
-  - package.json defines import aliases under "imports" (e.g., "#config/*", "#services/*"). These are used across the codebase to avoid long relative paths (e.g., import logger from '#config/logger.js').
+  - package.json defines import aliases under "imports" (e.g., "#config/_", "#services/_"). These are used across the codebase to avoid long relative paths (e.g., import logger from '#config/logger.js').
 
 - Auth feature flow (implemented path: POST /api/auth/sign-up)
   - src/routes/auth.routes.js maps the HTTP route to the controller.

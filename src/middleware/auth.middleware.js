@@ -6,7 +6,7 @@ export const authenticate = (req, res, next) => {
   try {
     // Get token from cookie
     const token = cookies.get(req, 'token');
-    
+
     if (!token) {
       return res.status(401).json({
         error: 'Unauthorized',
@@ -17,7 +17,7 @@ export const authenticate = (req, res, next) => {
     // Verify token
     const decoded = jwtToken.verify(token);
     req.user = decoded; // Add user info to request object
-    
+
     next();
   } catch (error) {
     logger.error('Authentication error:', error);

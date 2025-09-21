@@ -72,7 +72,10 @@ export const signin = async (req, res, next) => {
     });
   } catch (error) {
     logger.error('Signin error');
-    if (error.message === 'User not found' || error.message === 'Invalid password') {
+    if (
+      error.message === 'User not found' ||
+      error.message === 'Invalid password'
+    ) {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
     next(error);

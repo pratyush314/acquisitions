@@ -58,7 +58,7 @@ export const authenticateUser = async ({ email, password }) => {
       .from(users)
       .where(eq(users.email, email))
       .limit(1);
-    
+
     if (!user) {
       throw new Error('User not found');
     }
@@ -78,7 +78,10 @@ export const authenticateUser = async ({ email, password }) => {
     };
   } catch (error) {
     logger.error('Error authenticating user :', error);
-    if (error.message === 'User not found' || error.message === 'Invalid password') {
+    if (
+      error.message === 'User not found' ||
+      error.message === 'Invalid password'
+    ) {
       throw error;
     }
     throw new Error('Error authenticating user');

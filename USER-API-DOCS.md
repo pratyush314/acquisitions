@@ -7,12 +7,14 @@ This document describes the complete User CRUD (Create, Read, Update, Delete) op
 All user endpoints require authentication via JWT token stored in HTTP-only cookies. Users must be signed in to access these endpoints.
 
 ### Authorization Levels
+
 - **User**: Can view, update, and delete their own profile
 - **Admin**: Can perform all operations on any user
 
 ## Endpoints
 
 ### 1. Get All Users
+
 **GET** `/api/users`
 
 **Authorization**: Admin only
@@ -20,6 +22,7 @@ All user endpoints require authentication via JWT token stored in HTTP-only cook
 **Description**: Retrieves a list of all users in the system.
 
 **Response** (200 OK):
+
 ```json
 {
   "message": "Successfully retrieved users.",
@@ -38,12 +41,14 @@ All user endpoints require authentication via JWT token stored in HTTP-only cook
 ```
 
 **Error Responses**:
+
 - `401 Unauthorized`: No authentication token or invalid token
 - `403 Forbidden`: User is not an admin
 
 ---
 
 ### 2. Get User by ID
+
 **GET** `/api/users/:id`
 
 **Authorization**: Authenticated users
@@ -51,9 +56,11 @@ All user endpoints require authentication via JWT token stored in HTTP-only cook
 **Description**: Retrieves a specific user by ID.
 
 **Parameters**:
+
 - `id` (URL parameter): User ID (must be a valid number)
 
 **Response** (200 OK):
+
 ```json
 {
   "message": "Successfully retrieved user.",
@@ -69,6 +76,7 @@ All user endpoints require authentication via JWT token stored in HTTP-only cook
 ```
 
 **Error Responses**:
+
 - `400 Bad Request`: Invalid user ID format
 - `401 Unauthorized`: No authentication token or invalid token
 - `404 Not Found`: User not found
@@ -76,9 +84,11 @@ All user endpoints require authentication via JWT token stored in HTTP-only cook
 ---
 
 ### 3. Update User
+
 **PUT** `/api/users/:id`
 
-**Authorization**: 
+**Authorization**:
+
 - Users can update their own profile
 - Admins can update any user
 - Only admins can change user roles
@@ -86,9 +96,11 @@ All user endpoints require authentication via JWT token stored in HTTP-only cook
 **Description**: Updates user information.
 
 **Parameters**:
+
 - `id` (URL parameter): User ID (must be a valid number)
 
 **Request Body** (all fields are optional):
+
 ```json
 {
   "name": "Updated Name",
@@ -99,12 +111,14 @@ All user endpoints require authentication via JWT token stored in HTTP-only cook
 ```
 
 **Field Validation**:
+
 - `name`: 2-255 characters, trimmed
 - `email`: Valid email format, lowercase, trimmed
 - `password`: 6-128 characters
 - `role`: Either "user" or "admin" (admin only)
 
 **Response** (200 OK):
+
 ```json
 {
   "message": "User updated successfully",
@@ -120,9 +134,10 @@ All user endpoints require authentication via JWT token stored in HTTP-only cook
 ```
 
 **Error Responses**:
+
 - `400 Bad Request`: Invalid request data or validation errors
 - `401 Unauthorized`: No authentication token or invalid token
-- `403 Forbidden`: 
+- `403 Forbidden`:
   - User trying to update another user's profile
   - Non-admin trying to change role
 - `404 Not Found`: User not found
@@ -131,18 +146,22 @@ All user endpoints require authentication via JWT token stored in HTTP-only cook
 ---
 
 ### 4. Delete User
+
 **DELETE** `/api/users/:id`
 
-**Authorization**: 
+**Authorization**:
+
 - Users can delete their own account
 - Admins can delete any user
 
 **Description**: Deletes a user from the system.
 
 **Parameters**:
+
 - `id` (URL parameter): User ID (must be a valid number)
 
 **Response** (200 OK):
+
 ```json
 {
   "message": "User deleted successfully",
@@ -155,6 +174,7 @@ All user endpoints require authentication via JWT token stored in HTTP-only cook
 ```
 
 **Error Responses**:
+
 - `400 Bad Request`: Invalid user ID format
 - `401 Unauthorized`: No authentication token or invalid token
 - `403 Forbidden`: User trying to delete another user's account (non-admin)
@@ -163,18 +183,21 @@ All user endpoints require authentication via JWT token stored in HTTP-only cook
 ## Example Usage with cURL
 
 ### 1. Get All Users (Admin only)
+
 ```bash
 curl -X GET "http://localhost:3000/api/users" \
   -H "Cookie: token=your_jwt_token_here"
 ```
 
 ### 2. Get User by ID
+
 ```bash
 curl -X GET "http://localhost:3000/api/users/1" \
   -H "Cookie: token=your_jwt_token_here"
 ```
 
 ### 3. Update User
+
 ```bash
 curl -X PUT "http://localhost:3000/api/users/1" \
   -H "Content-Type: application/json" \
@@ -186,6 +209,7 @@ curl -X PUT "http://localhost:3000/api/users/1" \
 ```
 
 ### 4. Delete User
+
 ```bash
 curl -X DELETE "http://localhost:3000/api/users/1" \
   -H "Cookie: token=your_jwt_token_here"
@@ -196,6 +220,7 @@ curl -X DELETE "http://localhost:3000/api/users/1" \
 All endpoints return consistent error responses with appropriate HTTP status codes:
 
 **Validation Error** (400):
+
 ```json
 {
   "error": "Validation failed",
@@ -204,6 +229,7 @@ All endpoints return consistent error responses with appropriate HTTP status cod
 ```
 
 **Authentication Error** (401):
+
 ```json
 {
   "error": "Unauthorized",
@@ -212,6 +238,7 @@ All endpoints return consistent error responses with appropriate HTTP status cod
 ```
 
 **Authorization Error** (403):
+
 ```json
 {
   "error": "Forbidden",
@@ -220,6 +247,7 @@ All endpoints return consistent error responses with appropriate HTTP status cod
 ```
 
 **Not Found Error** (404):
+
 ```json
 {
   "error": "Not found",
@@ -228,6 +256,7 @@ All endpoints return consistent error responses with appropriate HTTP status cod
 ```
 
 **Conflict Error** (409):
+
 ```json
 {
   "error": "Conflict",
@@ -259,10 +288,10 @@ All endpoints return consistent error responses with appropriate HTTP status cod
 3. **Authorization Matrix**:
    | Action | Own Profile | Other Users (User Role) | Other Users (Admin Role) |
    |--------|-------------|------------------------|-------------------------|
-   | View   | ✅          | ❌                     | ✅                      |
-   | Update | ✅          | ❌                     | ✅                      |
-   | Delete | ✅          | ❌                     | ✅                      |
-   | Change Role | ❌     | ❌                     | ✅                      |
+   | View | ✅ | ❌ | ✅ |
+   | Update | ✅ | ❌ | ✅ |
+   | Delete | ✅ | ❌ | ✅ |
+   | Change Role | ❌ | ❌ | ✅ |
 
 ## Testing
 
